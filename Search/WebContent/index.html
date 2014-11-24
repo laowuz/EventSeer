@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>News Event Search</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script
+	src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.css" rel="stylesheet" />
+
+<!-- Custom styles for this template -->
+<link href="css/style.css" rel="stylesheet" />
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#search_btn").click(function() {
+			var query = $("#query_input").val();
+			if (query == "")
+				return false;
+		});
+	});
+</script>
+
+</head>
+
+
+<body>
+
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">News Event Search</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="home_intro">
+			<h1>News Event Search</h1>
+			<p class="lead">Find out events and their timelines!</p>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<form action="/esp/ESPServlet" method="get" role="form"
+			class="form-horizontal">
+			<div class="col-sm-offset-2 col-sm-6">
+				<input type="text" name="q" id="query_input" placeholder="Search"
+					class="form-control"> </input>
+			</div>
+			<div class="col-sm-2">
+				<input type="submit" value="Search" id="search_btn"
+					class="btn btn-primary"> </input>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

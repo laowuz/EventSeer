@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+<title>News Event Search</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script
+	src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Custom styles for this template -->
+<link href="css/style.css" rel="stylesheet" />
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.css" rel="stylesheet" />
+
+<script>
+	$(document).ready(function() {
+		$("#search_btn").click(function() {
+			var query = $("#query_input").val();
+			if (query == "")
+				return false;
+		});
+		$("#btn1").click(function() {
+			var html = $("#row1").html()
+			alert(html);
+		});
+	});
+</script>
+
+</head>
+
+
+<body>
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">News Event Search</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<div class="row">
+					<div class="col-md-5">
+						<form action="/esp/ESPServlet" method="get"
+							class="navbar-form navbar-left">
+							<div class="input-group">
+								<input class="form-control" placeholder="Search" type="text"
+									name="q" id="query_input" value="#value#"> </input> <span
+									class="input-group-btn">
+									<button id="search_btn" type="submit" class="btn btn-primary">Search</button>
+								</span>
+							</div>
+						</form>
+					</div>
+					#method# #sort#
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--
+	<div class="row">
+		<div class="container">
+			<div class="resNum">Total 1000 results</div>
+			<div id="result1" class="result">
+				<div class="result_title">
+					<h4>
+						<a href="#"> Syrianâ€“Turkish border clash </a>
+					</h4>
+				</div>
+				<div id="row1" class="row">
+					<div class="col-md-3 block_margin">
+						<div>Grid classes apply to devices with screen widths
+							greater than or equal to the breakpoint sizes, and override grid
+							classes targeted at smaller devices. Therefore, applying any
+							.col-md- class to an element will not only affect its styling on
+							medium devices but also on large devices if a .col-lg- class is
+							not present.</div>
+						<a href="#">more</a>
+						<div class="text-right">
+							<span class="label label-success">Disaster</span> <span
+								class="event_date"> <em>2014-3-31</em>
+							</span>
+						</div>
+
+					</div>
+					<div class="col-md-3 block_margin">Grid classes
+						apply to devices with screen widths greater than or equal to the
+						breakpoint sizes, and override grid classes targeted at smaller
+						devices. Therefore, applying any .col-md- class to an element will
+						not only affect its styling on medium devices but also on large
+						devices if a .col-lg- class is not present.</div>
+					<div class="col-md-3 block_margin">Grid classes
+						apply to devices with screen widths greater than or equal to the
+						breakpoint sizes, and override grid classes targeted at smaller
+						devices. Therefore, applying any .col-md- class to an element will
+						not only affect its styling on medium</div>
+					<div class="col-md-3 block_margin">Grid classes
+						apply to devices with screen widths greater than or equal to the
+						breakpoint sizes, and override grid classes targeted at smaller
+						devices. Therefore, applying any .col-md- class to an element will
+						not only affect its styling on medium devices but also on large
+						devices if a .col-lg- class is not present.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 
+	<div class="container">
+		<blockquote>
+			<p>The death toll from the disaster soars to more than 6,500, as
+				units of the Indian Army struggle to reach thousands of people
+				stranded in country's northwest</p>
+		</blockquote>
+		<div class="result">
+			<span class="result_title">
+				<h4>
+					<a href="#"> Maylasia </a>
+				</h4>
+			</span> <span class="news_date">ttt </span>
+			<div class="desc_bar">
+				<span class="news_date">2013-04-07</span> <span class="news_hyphen">-</span>
+				<span class="result_url">www.baidu.com</span>
+
+			</div>
+			<div class="result_description">American investigators
+				reviewing a hard drive belonging to the captain of missing Malaysia
+				Airlines Flight 370 have found that there sdddddddddddddd</div>
+		</div>
+	</div>
+	-->
+
+	<div id="result" class="container">#result#</div>
+	<div id="pages" class="container">#pages#</div>
+
+</body>
+</html>
